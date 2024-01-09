@@ -54,6 +54,7 @@ Route::group(['prefix' => 'crm', 'namespace' => 'Crm'], function () {
     Route::get('languages', 'LanguageController@index');
 
     Route::get('news/lists', 'NewsController@lists');
+    Route::get('remarks/lists', 'RemarkController@lists');
 
     Route::put('news/status-update/{id}','NewsController@update_status');
 
@@ -75,6 +76,7 @@ Route::group(['prefix' => 'crm', 'namespace' => 'Crm', 'middleware' => ['auth.jw
 
     //News moduli
     Route::apiResource('news', 'NewsController');
+    Route::apiResource('remarks', 'RemarkController');
 
     ///profile
     Route::get('profile', 'ProfileController@view');
