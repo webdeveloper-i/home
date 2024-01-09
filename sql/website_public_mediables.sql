@@ -1,0 +1,14 @@
+INSERT INTO public.mediables (media_id, mediable_type, mediable_id, tag, "order") VALUES (2, 'App\Models\Crm\News', 2, 'news_image', 1);
+INSERT INTO public.mediables (media_id, mediable_type, mediable_id, tag, "order") VALUES (2, 'App\Models\Crm\News', 3, 'news_image', 1);
+INSERT INTO public.mediables (media_id, mediable_type, mediable_id, tag, "order") VALUES (2, 'App\Models\Crm\News', 4, 'news_image', 1);
+INSERT INTO public.mediables (media_id, mediable_type, mediable_id, tag, "order") VALUES (2, 'App\Models\Crm\News', 5, 'news_image', 1);
+INSERT INTO public.mediables (media_id, mediable_type, mediable_id, tag, "order") VALUES (2, 'App\Models\Crm\News', 6, 'news_image', 1);
+INSERT INTO public.mediables (media_id, mediable_type, mediable_id, tag, "order") VALUES (2, 'App\Models\Crm\News', 7, 'news_image', 1);
+INSERT INTO public.mediables (media_id, mediable_type, mediable_id, tag, "order") VALUES (2, 'App\Models\Crm\News', 5, 'post_image', 1);
+INSERT INTO public.mediables (media_id, mediable_type, mediable_id, tag, "order") VALUES (2, 'App\Models\Crm\News', 9, 'news_image', 1);
+INSERT INTO public.mediables (media_id, mediable_type, mediable_id, tag, "order") VALUES (2, 'App\Models\Crm\News', 8, 'news_image', 1);
+INSERT INTO public.mediables (media_id, mediable_type, mediable_id, tag, "order") VALUES (2, 'App\Models\Crm\News', 10, 'news_image', 1);
+INSERT INTO public.mediables (media_id, mediable_type, mediable_id, tag, "order") VALUES (2, 'App\Models\Crm\News', 11, 'news_image', 1);
+INSERT INTO public.mediables (media_id, mediable_type, mediable_id, tag, "order") VALUES (2, 'App\Models\Crm\News', 12, 'news_image', 1);
+INSERT INTO public.mediables (media_id, mediable_type, mediable_id, tag, "order") VALUES (2, 'App\Models\Crm\News', 13, 'news_image', 1);
+INSERT INTO public.mediables (media_id, mediable_type, mediable_id, tag, "order") VALUES (2, 'App\Models\Crm\News', 14, 'news_image', 1);

@@ -1,0 +1,2 @@
+INSERT INTO public.permission_groups (id, name, created_at, updated_at) VALUES (1, 'admin', null, null);
+INSERT INTO public.permission_groups (id, name, created_at, updated_at) VALUES (2, 'user', null, null);

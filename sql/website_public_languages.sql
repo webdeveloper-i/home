@@ -1,0 +1,1 @@
+INSERT INTO public.languages (code, name) VALUES ('oz', 'Uzbek');
