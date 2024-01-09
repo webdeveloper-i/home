@@ -8,8 +8,6 @@ use Illuminate\Notifications\Notifiable;
 
 class NewsTranslation extends Model
 {
-   // use HasCompositePrimaryKey;
-
     public $incrementing = false;
     public $primaryKey = ['news_id', 'language'];
 

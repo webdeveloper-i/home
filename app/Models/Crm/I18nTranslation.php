@@ -8,8 +8,6 @@ use Illuminate\Database\Eloquent\SoftDeletes;
 
 class I18nTranslation extends Model
 {
-//    use HasCompositePrimaryKey;
-
     use SoftDeletes;
 
     public $primaryKey = ['source_id', 'language'];

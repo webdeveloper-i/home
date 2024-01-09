@@ -53,9 +53,7 @@ class AuthController extends Controller
      */
     public function logout(Request $request)
     {
-        // Get JWT Token from the request header key "Authorization"
         $token = $request->header('Authorization');
-        // Invalidate the token
         try {
             auth('api')->invalidate($token);
             return $this->successResponse('Successfully logged out');

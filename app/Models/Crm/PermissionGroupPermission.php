@@ -10,8 +10,6 @@ class PermissionGroupPermission extends Model
 {
     use HasFactory;
 
-//    use HasCompositePrimaryKey;
-
     public $timestamps = false;
     public $incrementing = false;
 
