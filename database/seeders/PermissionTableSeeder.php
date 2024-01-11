@@ -271,46 +271,46 @@ class PermissionTableSeeder extends Seeder
             ]);
 
 
-        /*Countries*/
+        /*News*/
 
         $parent = Permission::updateOrCreate(
             [
-                'name' => 'countries',
+                'name' => 'news',
             ],
             [
-                'display_name' => 'Mamlakatlar'
+                'display_name' => 'Yangiliklar'
             ]);
 
         Permission::updateOrCreate(
             [
-                'name' => 'crm_countries_index',
+                'name' => 'crm_news_index',
             ],
             [
-                'display_name' => 'Mamlakatlar ro\'yxati',
+                'display_name' => 'Yangiliklar ro\'yxati',
                 'parent_id' => $parent->id
             ]);
 
         Permission::updateOrCreate(
             [
-                'name' => 'crm_countries_store',
+                'name' => 'crm_news_store',
             ],
             [
-                'display_name' => 'Mamlakatni saqlash',
+                'display_name' => 'Yangillikni saqlash',
                 'parent_id' => $parent->id
             ]);
 
         Permission::updateOrCreate(
             [
-                'name' => 'crm_countries_update',
+                'name' => 'crm_news_update',
             ],
             [
-                'display_name' => 'Mamlakatni tahrirlash',
+                'display_name' => 'Yangilikni tahrirlash',
                 'parent_id' => $parent->id
             ]);
 
         Permission::updateOrCreate(
             [
-                'name' => 'crm_countries_show',
+                'name' => 'crm_news_show',
             ],
             [
                 'display_name' => 'Mamlakatni ko\'rish',
@@ -319,728 +319,74 @@ class PermissionTableSeeder extends Seeder
 
         Permission::updateOrCreate(
             [
-                'name' => 'crm_countries_destroy',
+                'name' => 'crm_news_destroy',
             ],
             [
                 'display_name' => 'Mamlakatni o\'chirish',
                 'parent_id' => $parent->id
             ]);
 
-        /*Admin Publisher Resource*/
+        Permission::updateOrCreate(
+            [
+                'name' => 'crm_news_update_status',
+            ],
+            [
+                'display_name' => 'Yangilikni o\'chirish',
+                'parent_id' => $parent->id
+            ]);
+
+        /*Remark*/
 
         $parent = Permission::updateOrCreate(
             [
-                'name' => 'crm_publisher_resource',
+                'name' => 'remark',
             ],
             [
-                'display_name' => 'Nashriyot manbalari'
+                'display_name' => 'Remarklar'
             ]);
 
         Permission::updateOrCreate(
             [
-                'name' => 'crm_publisher_resource_index',
+                'name' => 'crm_remark_index',
             ],
             [
-                'display_name' => 'Nashriyot manbalari ro\'yxati',
+                'display_name' => 'Remarklar ro\'yxati',
                 'parent_id' => $parent->id
             ]);
 
         Permission::updateOrCreate(
             [
-                'name' => 'crm_publisher_resource_store',
+                'name' => 'crm_remark_store',
             ],
             [
-                'display_name' => 'Nashriyot manbalarini saqlash',
+                'display_name' => 'Remarklarni saqlash',
                 'parent_id' => $parent->id
             ]);
 
-
-        Permission::updateOrCreate(
-            [
-                'name' => 'crm_publisher_resource_update',
-            ],
-            [
-                'display_name' => 'Nashriyot manbani tahrirlash',
-                'parent_id' => $parent->id
-            ]);
-
-        Permission::updateOrCreate(
-            [
-                'name' => 'crm_publisher_resource_update_landing_position',
-            ],
-            [
-                'display_name' => 'Nashriyot manbalarini ommabopligini o\'zgartirish',
-                'parent_id' => $parent->id
-            ]);
-
-
-
-        Permission::updateOrCreate(
-            [
-                'name' => 'crm_publisher_resource_show',
-            ],
-            [
-                'display_name' => 'Nashriyot manbani ko\'rish',
-                'parent_id' => $parent->id
-            ]);
-
-        /*Regions*/
-
-        $parent = Permission::updateOrCreate(
-            [
-                'name' => 'crm_region',
-            ],
-            [
-                'display_name' => 'Viloyatlar'
-            ]);
-
-        Permission::updateOrCreate(
-            [
-                'name' => 'crm_region_index',
-            ],
-            [
-                'display_name' => 'Viloyatlar',
-                'parent_id' => $parent->id
-            ]);
-
-        Permission::updateOrCreate(
-            [
-                'name' => 'crm_region_store',
-            ],
-            [
-                'display_name' => 'Viloyat saqlash',
-                'parent_id' => $parent->id
-            ]);
-
-        Permission::updateOrCreate(
-            [
-                'name' => 'crm_region_update',
-            ],
-            [
-                'display_name' => 'Viloyatni tahrirlash',
-                'parent_id' => $parent->id
-            ]);
-
-        Permission::updateOrCreate(
-            [
-                'name' => 'crm_region_show',
-            ],
-            [
-                'display_name' => 'Viloyatni tahrirlash',
-                'parent_id' => $parent->id
-            ]);
-
-        Permission::updateOrCreate(
-            [
-                'name' => 'crm_region_destroy',
-            ],
-            [
-                'display_name' => 'Viloyatni o\'chirish',
-                'parent_id' => $parent->id
-            ]);
-
-        /*resource categories*/
-
-        $parent = Permission::updateOrCreate(
-            [
-                'name' => 'crm_resource_categories',
-            ],
-            [
-                'display_name' => 'Resurs toifalari'
-            ]);
-
-        Permission::updateOrCreate(
-            [
-                'name' => 'crm_resource_categories_index',
-            ],
-            [
-                'display_name' => 'Resurs toifalari ro\'yxati',
-                'parent_id' => $parent->id
-            ]);
-
-        Permission::updateOrCreate(
-            [
-                'name' => 'crm_resource_categories_store',
-            ],
-            [
-                'display_name' => 'Resurs toifani saqlash',
-                'parent_id' => $parent->id
-            ]);
-
-        Permission::updateOrCreate(
-            [
-                'name' => 'crm_resource_categories_update',
-            ],
-            [
-                'display_name' => 'Resurs toifani tahrirlash',
-                'parent_id' => $parent->id
-            ]);
-
-        Permission::updateOrCreate(
-            [
-                'name' => 'crm_resource_categories_show',
-            ],
-            [
-                'display_name' => 'Resurs toifani ko\'rish',
-                'parent_id' => $parent->id
-            ]);
-
-        Permission::updateOrCreate(
-            [
-                'name' => 'crm_resource_categories_destroy',
-            ],
-            [
-                'display_name' => 'Resurs toifani o\'chirish',
-                'parent_id' => $parent->id
-            ]);
-
-        /*resource fields*/
-
-        $parent = Permission::updateOrCreate(
-            [
-                'name' => 'crm_resource_fields',
-            ],
-            [
-                'display_name' => 'Resurs maydonlari'
-            ]);
-
-        Permission::updateOrCreate(
-            [
-                'name' => 'crm_resource_fields_index',
-            ],
-            [
-                'display_name' => 'Resurs maydonlari ro\'yxati',
-                'parent_id' => $parent->id
-            ]);
-
-        Permission::updateOrCreate(
-            [
-                'name' => 'crm_resource_fields_store',
-            ],
-            [
-                'display_name' => 'Resurs maydonni saqlash',
-                'parent_id' => $parent->id
-            ]);
-
-        Permission::updateOrCreate(
-            [
-                'name' => 'crm_resource_fields_update',
-            ],
-            [
-                'display_name' => 'Resurs maydonni tahrirlash',
-                'parent_id' => $parent->id
-            ]);
-
-        Permission::updateOrCreate(
-            [
-                'name' => 'crm_resource_fields_show',
-            ],
-            [
-                'display_name' => 'Resurs maydonni ko\'rish',
-                'parent_id' => $parent->id
-            ]);
-
-        Permission::updateOrCreate(
-            [
-                'name' => 'crm_resource_fields_destroy',
-            ],
-            [
-                'display_name' => 'Resurs maydonni o\'chirish',
-                'parent_id' => $parent->id
-            ]);
-
-
-        $parent = Permission::updateOrCreate(
-            [
-                'name' => 'crm_resource_languages',
-            ],
-            [
-                'display_name' => 'Resurs tillar'
-            ]);
-
-        Permission::updateOrCreate(
-            [
-                'name' => 'crm_resource_languages_index',
-            ],
-            [
-                'display_name' => 'Resurs tillar ro\'yxati',
-                'parent_id' => $parent->id
-            ]);
-
-        Permission::updateOrCreate(
-            [
-                'name' => 'crm_resource_languages_store',
-            ],
-            [
-                'display_name' => 'Resurs tilni saqlash',
-                'parent_id' => $parent->id
-            ]);
-
-        Permission::updateOrCreate(
-            [
-                'name' => 'crm_resource_languages_update',
-            ],
-            [
-                'display_name' => 'Resurs tilni tahrirlash',
-                'parent_id' => $parent->id
-            ]);
-
-        Permission::updateOrCreate(
-            [
-                'name' => 'crm_resource_languages_show',
-            ],
-            [
-                'display_name' => 'Resurs tilni ko\'rish',
-                'parent_id' => $parent->id
-            ]);
-
-        Permission::updateOrCreate(
-            [
-                'name' => 'crm_resource_languages_destroy',
-            ],
-            [
-                'display_name' => 'Resurs tilni o\'chirish',
-                'parent_id' => $parent->id
-            ]);
-
-        /*resource types*/
-
-        $parent = Permission::updateOrCreate(
-            [
-                'name' => 'crm_resource_types',
-            ],
-            [
-                'display_name' => 'Resurs turlar'
-            ]);
-
-        Permission::updateOrCreate(
-            [
-                'name' => 'crm_resource_types_index',
-            ],
-            [
-                'display_name' => 'Resurs turlari ro\'yxati',
-                'parent_id' => $parent->id
-            ]);
-
-        Permission::updateOrCreate(
-            [
-                'name' => 'crm_resource_types_store',
-            ],
-            [
-                'display_name' => 'Resurs turni saqlash',
-                'parent_id' => $parent->id
-            ]);
-
-        Permission::updateOrCreate(
-            [
-                'name' => 'crm_resource_types_update',
-            ],
-            [
-                'display_name' => 'Resurs turni tahrirlash',
-                'parent_id' => $parent->id
-            ]);
-
-        Permission::updateOrCreate(
-            [
-                'name' => 'crm_resource_types_show',
-            ],
-            [
-                'display_name' => 'Resurs turni ko\'rish',
-                'parent_id' => $parent->id
-            ]);
-
-        Permission::updateOrCreate(
-            [
-                'name' => 'crm_resource_types_destroy',
-            ],
-            [
-                'display_name' => 'Resurs turni o\'chirish',
-                'parent_id' => $parent->id
-            ]);
-
-        /*resource modifiers*/
-
-        $parent = Permission::updateOrCreate(
-            [
-                'name' => 'crm_resource_modifiers',
-            ],
-            [
-                'display_name' => 'Resurs ochiqligi maydonlari'
-            ]);
-
-        Permission::updateOrCreate(
-            [
-                'name' => 'crm_resource_modifiers_index',
-            ],
-            [
-                'display_name' => 'Resurs ochiqligi ro\'yxati',
-                'parent_id' => $parent->id
-            ]);
-
-        Permission::updateOrCreate(
-            [
-                'name' => 'crm_resource_modifiers_store',
-            ],
-            [
-                'display_name' => 'Resurs ochiqligini saqlash',
-                'parent_id' => $parent->id
-            ]);
-
-        Permission::updateOrCreate(
-            [
-                'name' => 'crm_resource_modifiers_update',
-            ],
-            [
-                'display_name' => 'Resurs ochiqligini tahrirlash',
-                'parent_id' => $parent->id
-            ]);
-
-        Permission::updateOrCreate(
-            [
-                'name' => 'crm_resource_modifiers_show',
-            ],
-            [
-                'display_name' => 'Resurs ochiqligini ko\'rish',
-                'parent_id' => $parent->id
-            ]);
-
-        Permission::updateOrCreate(
-            [
-                'name' => 'crm_resource_modifiers_destroy',
-            ],
-            [
-                'display_name' => 'Resurs ochiqligini o\'chirish',
-                'parent_id' => $parent->id
-            ]);
-
-        /*Universities*/
-
-        $parent = Permission::updateOrCreate(
-            [
-                'name' => 'crm_universities',
-            ],
-            [
-                'display_name' => 'Universitetlar'
-            ]);
-
-        Permission::updateOrCreate(
-            [
-                'name' => 'crm_universities_index',
-            ],
-            [
-                'display_name' => 'Universitetlar ro\'yxati',
-                'parent_id' => $parent->id
-            ]);
-
-        Permission::updateOrCreate(
-            [
-                'name' => 'crm_universities_store',
-            ],
-            [
-                'display_name' => 'Universitetni saqlash',
-                'parent_id' => $parent->id
-            ]);
-
-        Permission::updateOrCreate(
-            [
-                'name' => 'crm_universities_update',
-            ],
-            [
-                'display_name' => 'Universitetni tahrirlash',
-                'parent_id' => $parent->id
-            ]);
-
-        Permission::updateOrCreate(
-            [
-                'name' => 'crm_universities_show',
-            ],
-            [
-                'display_name' => 'Universitetni ko\'rish',
-                'parent_id' => $parent->id
-            ]);
-
-        Permission::updateOrCreate(
-            [
-                'name' => 'crm_universities_destroy',
-            ],
-            [
-                'display_name' => 'Universitetni o\'chirish',
-                'parent_id' => $parent->id
-            ]);
-
-        /*University types*/
-
-        $parent = Permission::updateOrCreate(
-            [
-                'name' => 'crm_university_types',
-            ],
-            [
-                'display_name' => 'Universitet tiplari'
-            ]);
-
-        Permission::updateOrCreate(
-            [
-                'name' => 'crm_university_types_index',
-            ],
-            [
-                'display_name' => 'Universitetlar tiplari ro\'yxati',
-                'parent_id' => $parent->id
-            ]);
-
-        Permission::updateOrCreate(
-            [
-                'name' => 'crm_university_types_store',
-            ],
-            [
-                'display_name' => 'Universitetni tipini saqlash',
-                'parent_id' => $parent->id
-            ]);
-
-        Permission::updateOrCreate(
-            [
-                'name' => 'crm_university_types_update',
-            ],
-            [
-                'display_name' => 'Universitetni tipini tahrirlash',
-                'parent_id' => $parent->id
-            ]);
-
-        Permission::updateOrCreate(
-            [
-                'name' => 'crm_university_types_show',
-            ],
-            [
-                'display_name' => 'Universitetni tipini ko\'rish',
-                'parent_id' => $parent->id
-            ]);
-
-        Permission::updateOrCreate(
-            [
-                'name' => 'crm_university_types_destroy',
-            ],
-            [
-                'display_name' => 'Universitetni tipini o\'chirish',
-                'parent_id' => $parent->id
-            ]);
-
-
-        /*Landing position*/
-
-        $parent = Permission::updateOrCreate(
-            [
-                'name' => 'crm_landing_position',
-            ],
-            [
-                'display_name' => 'Ommabolik tartibi'
-            ]);
-
-        Permission::updateOrCreate(
-            [
-                'name' => 'crm_landing_position_index',
-            ],
-            [
-                'display_name' => 'Ommaboplik tartibi ro\'yxati',
-                'parent_id' => $parent->id
-            ]);
-
-        Permission::updateOrCreate(
-            [
-                'name' => 'crm_landing_position_store',
-            ],
-            [
-                'display_name' => 'Ommaboplik tartibini saqlash',
-                'parent_id' => $parent->id
-            ]);
-
-        Permission::updateOrCreate(
-            [
-                'name' => 'crm_landing_position_update',
-            ],
-            [
-                'display_name' => 'Ommaboplik tartibini tahrirlash',
-                'parent_id' => $parent->id
-            ]);
-
-        Permission::updateOrCreate(
-            [
-                'name' => 'crm_landing_position_show',
-            ],
-            [
-                'display_name' => 'Ommaboplik tartibini ko\'rish',
-                'parent_id' => $parent->id
-            ]);
-
-        Permission::updateOrCreate(
-            [
-                'name' => 'crm_landing_position_destroy',
-            ],
-            [
-                'display_name' => 'Ommaboplik tartibini o\'chirish',
-                'parent_id' => $parent->id
-            ]);
-
-        /*journal types*/
-
-        $parent = Permission::updateOrCreate(
-            [
-                'name' => 'crm_journal_types',
-            ],
-            [
-                'display_name' => 'Jurnal tiplari'
-            ]);
-
-        Permission::updateOrCreate(
-            [
-                'name' => 'crm_journal_types_index',
-            ],
-            [
-                'display_name' => 'Jurnal tiplari ro\'yxati',
-                'parent_id' => $parent->id
-            ]);
-
-        Permission::updateOrCreate(
-            [
-                'name' => 'crm_journal_types_store',
-            ],
-            [
-                'display_name' => 'Jurnal tiplari saqlash',
-                'parent_id' => $parent->id
-            ]);
-
-        Permission::updateOrCreate(
-            [
-                'name' => 'crm_journal_types_update',
-            ],
-            [
-                'display_name' => 'Jurnal tiplarini tahrirlash',
-                'parent_id' => $parent->id
-            ]);
-
-        Permission::updateOrCreate(
-            [
-                'name' => 'crm_journal_types_show',
-            ],
-            [
-                'display_name' => 'Jurnal tiplarini ko\'rish',
-                'parent_id' => $parent->id
-            ]);
-
-        Permission::updateOrCreate(
-            [
-                'name' => 'crm_journal_types_destroy',
-            ],
-            [
-                'display_name' => 'jurnal tiplarini o\'chirish',
-                'parent_id' => $parent->id
-            ]);
-
-        /*journals */
-
-        $parent = Permission::updateOrCreate(
-            [
-                'name' => 'crm_journal',
-            ],
-            [
-                'display_name' => 'Jurnallar'
-            ]);
-
-        Permission::updateOrCreate(
-            [
-                'name' => 'crm_journal_index',
-            ],
-            [
-                'display_name' => 'Jurnallar ro\'yxati',
-                'parent_id' => $parent->id
-            ]);
-
-        Permission::updateOrCreate(
-            [
-                'name' => 'crm_journal_store',
-            ],
-            [
-                'display_name' => 'Jurnalni saqlash',
-                'parent_id' => $parent->id
-            ]);
-
-        Permission::updateOrCreate(
-            [
-                'name' => 'crm_journal_update',
-            ],
-            [
-                'display_name' => 'Jurnalni tahrirlash',
-                'parent_id' => $parent->id
-            ]);
-
-        Permission::updateOrCreate(
-            [
-                'name' => 'crm_journal_show',
-            ],
-            [
-                'display_name' => 'Jurnalni ko\'rish',
-                'parent_id' => $parent->id
-            ]);
-
-        Permission::updateOrCreate(
-            [
-                'name' => 'crm_journal_destroy',
-            ],
-            [
-                'display_name' => 'jurnalni o\'chirish',
-                'parent_id' => $parent->id
-            ]);
-
-        /*resource intendeds */
-
-        $parent = Permission::updateOrCreate(
-            [
-                'name' => 'crm_resource_intendeds',
-            ],
-            [
-                'display_name' => 'Resurs kimga tegishliligi'
-            ]);
-
-        Permission::updateOrCreate(
-            [
-                'name' => 'crm_resource_intendeds_index',
-            ],
-            [
-                'display_name' => 'Resurs kimga tegishliligi ro\'yxati',
-                'parent_id' => $parent->id
-            ]);
-
-        Permission::updateOrCreate(
-            [
-                'name' => 'crm_resource_intended_store',
-            ],
-            [
-                'display_name' => 'Resurs kimga tegishliligini saqlash',
-                'parent_id' => $parent->id
-            ]);
-
         Permission::updateOrCreate(
             [
-                'name' => 'crm_resource_intended_update',
+                'name' => 'crm_remark_update',
             ],
             [
-                'display_name' => 'Resurs kimga tegishliligini tahrirlash',
+                'display_name' => 'remarklarni tahrirlash',
                 'parent_id' => $parent->id
             ]);
 
         Permission::updateOrCreate(
             [
-                'name' => 'crm_resource_intended_show',
+                'name' => 'crm_remark_show',
             ],
             [
-                'display_name' => 'Resurs kimga tegishliligini ko\'rish',
+                'display_name' => 'Remarkni ko\'rish',
                 'parent_id' => $parent->id
             ]);
 
         Permission::updateOrCreate(
             [
-                'name' => 'crm_resource_intended_destroy',
+                'name' => 'crm_remark_destroy',
             ],
             [
-                'display_name' => 'Resurs kimga tegishliligini o\'chirish',
+                'display_name' => 'Remarkni o\'chirish',
                 'parent_id' => $parent->id
             ]);
     }

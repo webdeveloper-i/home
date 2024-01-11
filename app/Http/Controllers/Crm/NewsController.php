@@ -255,7 +255,6 @@ class NewsController extends Controller
                     $query->where('news_translations.title', 'LIKE', "%{$request->title}%");
                 if (is_numeric($request->status))
                     $query->where('news.status','=',$request->status);
-
             })
             ->orderBy('news.id','asc')
             ->get();

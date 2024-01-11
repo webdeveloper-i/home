@@ -16,12 +16,11 @@ class RemarkController extends Controller
     public function __construct()
     {
          $this->media = new FileController();
-//         $this->middleware('permission:crm_remark_index', ['only' => 'index']);
-//         $this->middleware('permission:crm_remark_store', ['only' => 'store', 'show']);
-//         $this->middleware('permission:crm_remark_update', ['only' => 'update', 'show']);
-//         $this->middleware('permission:crm_remark_update_status', ['only' => 'update_status', 'show']);
-//         $this->middleware('permission:crm_remark_show', ['only' => 'show']);
-//         $this->middleware('permission:crm_remark_destroy', ['only' => 'destroy']);
+         $this->middleware('permission:crm_remark_index', ['only' => 'index']);
+         $this->middleware('permission:crm_remark_store', ['only' => 'store', 'show']);
+         $this->middleware('permission:crm_remark_update', ['only' => 'update', 'show']);
+         $this->middleware('permission:crm_remark_show', ['only' => 'show']);
+         $this->middleware('permission:crm_remark_destroy', ['only' => 'destroy']);
     }
 
     public function index(Request $request)
@@ -53,12 +52,12 @@ class RemarkController extends Controller
         $validator = Validator::make($request->all(), [
             'title'=>'required',
             'description'=>'required',
-            'file'=>'required|numeric',
+            'file'=>'exists:media,id',
             'status'=>'required|numeric',
             'creator_id'=>'required|numeric',
             'answer_user'=>'required',
             'answer_text'=>'required',
-            'answer_file'=>'required|numeric',
+            'answer_file'=>'exists:media,id',
             'created_date'=>'required|date|date_format:d.m.Y',
             'answered_date'=>'required|date|date_format:d.m.Y'
         ]);
@@ -101,12 +100,12 @@ class RemarkController extends Controller
         $validator = Validator::make($request->all(), [
             'title'=>'required',
             'description'=>'required',
-            'file'=>'required|numeric',
+            'file'=>'exists:media,id',
             'status'=>'required|numeric',
             'creator_id'=>'required|numeric',
             'answer_user'=>'required',
             'answer_text'=>'required',
-            'answer_file'=>'required|numeric',
+            'answer_file'=>'exists:media,id',
             'created_date'=>'required|date|date_format:d.m.Y',
             'answered_date'=>'required|date|date_format:d.m.Y'
         ]);
@@ -172,7 +171,6 @@ class RemarkController extends Controller
                     $query->where('title', '=', $request->title);
                 if ($request->type)
                     $query->where('description', '=', $request->description);
-
             })
             ->orderBy('id','asc')
             ->get();

@@ -112,7 +112,6 @@ class PermissionGroupController extends Controller
         return $this->successResponse('Deleted successfully');
     }
 
-
 	public function lists(Request $request)
     {
         $permission_groups = PermissionGroup::select('id', 'name')
@@ -125,5 +124,4 @@ class PermissionGroupController extends Controller
 
         return $this->successResponse($permission_groups);
     }
-
 }
